@@ -1,4 +1,4 @@
-type BudgetMessage =
+type BudgetStatus =
   | "Sota pressupost ✈️"
   | "Dins pressupost ✅"
   | "Sobre pressupost ⚠️";
@@ -8,7 +8,7 @@ type BudgetMessage =
 export function calculateBudgetStatus(
   totalExpenses: number, 
   budget: number
-):BudgetMessage {
+):BudgetStatus {
     const percentage = (totalExpenses / budget) * 100; 
     if (percentage < 80) {
       return "Sota pressupost ✈️";
